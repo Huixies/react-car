@@ -1,0 +1,16 @@
+1.安装依赖
+jest babel-jest @babel/preset-env @babel/preset-react react-test-renderer
+
+2.修改package.json的scripts
+"test": "jest-webpack"
+改为
+"test": "jest"
+
+3.修改babel配置
+// babel.config.js（如果没有，可手动创建）
+module.exports = {
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+};
+
+4.编写测试用例，并运行
+> yarn jest
